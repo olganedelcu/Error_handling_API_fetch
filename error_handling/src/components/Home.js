@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('https://github.com/olganedelcu/Error_handling_API_fetch/blob/cab808a8e8e9a5b1e2ab6981e8459160d2d0fd4f/error_handling/data/db.json')
+      fetch('/data.json')
         .then((res) => {
           return res.json();
         })
