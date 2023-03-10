@@ -7,14 +7,17 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("http://localhost:8000/blogs")
+      fetch('./components/data/db.json')
         .then((res) => {
           return res.json();
         })
         .then((data) => {
           setBlogs(data);
           setIsPending(false);
-        });
+        })
+        .catch(error => {
+            console.log(error.message);
+        })
     }, 1000);
   }, []);
 
