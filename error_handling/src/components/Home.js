@@ -18,10 +18,12 @@ const Home = () => {
     }, 1000);
   }, []);
 
-  return <div>
-    { isPending && <div>Loading...</div>}
-    { blogs && <BlogList blogs= {blogs} title="All Blogs!" />}
-  </div>;
+  return (
+    <div>
+      {isPending && <div>Loading...</div>}
+      {blogs && <BlogList blogs={blogs} title="All Blogs!" />}
+    </div>
+  );
 };
 
 export default Home;
